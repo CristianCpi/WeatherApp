@@ -20,9 +20,6 @@
         [showPreviousSelectedCities]="showPreviousSelectedCities"
       ></app-city-list>
     </div>
-    <button *ngIf="showPreviousSelectedCities" (click)="removeSelectedCity()">
-      Remove search history
-    </button>
   </div>
   <div *ngIf="!showPreviousSelectedCities">
     <div>

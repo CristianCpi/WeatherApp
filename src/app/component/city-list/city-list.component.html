@@ -5,3 +5,6 @@
   <td id="lon">{{ city.lon }}</td>
   <button (click)="getWeather(city)">Find out weather</button>
 </tr>
+<button *ngIf="showPreviousSelectedCities" (click)="removeSelectedCities()">
+  Remove search history
+</button>

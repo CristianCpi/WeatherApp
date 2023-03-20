@@ -50,11 +50,6 @@ export class SearchWeatherComponent implements OnInit {
     );
   }
 
-  public removeSelectedCity(): void {
-    localStorage.clear();
-    window.location.reload();
-  }
-
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Subject } from 'rxjs';
-
 import { City } from 'src/app/model/city';
-import { FetchWeatherService } from 'src/app/service/fetch-weather.service';
 import { StoreCitiesService } from 'src/app/service/store-cities.service';
 
 @Component({
@@ -26,5 +23,10 @@ export class CityListComponent {
       this.storeCitiesService.setUserChoice(city);
     }
     this.router.navigate(['/weather', city.lat, city.lon]);
+  }
+
+  public removeSelectedCities(): void {
+    localStorage.clear();
+    window.location.reload();
   }
 }
