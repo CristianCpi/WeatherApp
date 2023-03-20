@@ -1,0 +1,7 @@
+<tr *ngFor="let city of cities" class="cities">
+  <td id="name">{{ city.name }}</td>
+  <td id="country">{{ city.country }}</td>
+  <td id="lat">{{ city.lat }}</td>
+  <td id="lon">{{ city.lon }}</td>
+  <button (click)="getWeather(city)">Find out weather</button>
+</tr>

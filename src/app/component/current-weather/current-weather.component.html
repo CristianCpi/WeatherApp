@@ -1,0 +1,35 @@
+<body class="card">
+  <div>
+    <div style="position: relative">
+      <img src="../../../assets/images/weather.jpg" alt="AVATAR" />
+    </div>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <th id="name">Weather in {{ weather.name }}</th>
+      </tr>
+      <tr>
+        <td id="temp">Current temp: {{ weather.main.temp }}</td>
+      </tr>
+      <tr>
+        <td id="feels_like">Feels like: {{ weather.main.feels_like }}</td>
+      </tr>
+      <tr>
+        <td id="temp_min">Min temp: {{ weather.main.temp_min }}</td>
+      </tr>
+      <tr>
+        <td id="temp_max">Max temp: {{ weather.main.temp_max }}</td>
+      </tr>
+      <tr>
+        <td id="humidity">Humidity: {{ weather.main.humidity }}</td>
+      </tr>
+      <tr>
+        <td id="pressure">Pressure: {{ weather.main.pressure }}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <button (click)="returnToSearch()">Return to Search</button>
+  </div>
+</body>

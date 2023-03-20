@@ -1,0 +1,35 @@
+<body>
+  <div>
+    <input
+      class="center-block"
+      type="search"
+      placeholder="Search your city"
+      aria-label="Search"
+      (keyup)="searchCities(searchText.value)"
+      #searchText
+    />
+    <option *ngFor="let opt of cities" [value]="opt"></option>
+  </div>
+</body>
+
+<table>
+  <div *ngIf="showPreviousSelectedCities">
+    <div>
+      <app-city-list
+        [cities]="previousSelectedCities"
+        [showPreviousSelectedCities]="showPreviousSelectedCities"
+      ></app-city-list>
+    </div>
+    <button *ngIf="showPreviousSelectedCities" (click)="removeSelectedCity()">
+      Remove search history
+    </button>
+  </div>
+  <div *ngIf="!showPreviousSelectedCities">
+    <div>
+      <app-city-list
+        [cities]="cities"
+        [showPreviousSelectedCities]="showPreviousSelectedCities"
+      ></app-city-list>
+    </div>
+  </div>
+</table>
