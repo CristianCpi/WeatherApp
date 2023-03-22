@@ -17,6 +17,7 @@ export class CurrentWeatherComponent implements OnInit {
   private routeSub: Subscription | undefined;
   public lat = '';
   public lon = '';
+  public iconUrl = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -33,6 +34,8 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService.getWeather(this.lat, this.lon).subscribe(
       (weather) => {
         this.weather = weather;
+        this.iconUrl =
+          'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png';
       },
       (err) => {
         if (err.error && err.error.message) {

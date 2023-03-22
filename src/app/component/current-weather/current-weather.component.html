@@ -1,7 +1,8 @@
 <body class="card">
   <div>
-    <div style="position: relative">
-      <img src="../../../assets/images/weather.jpg" alt="AVATAR" />
+    <div>
+      <img [src]="this.iconUrl" alt="Weather Image" />
+      {{ weather.weather[0].main }}
     </div>
   </div>
   <div>
