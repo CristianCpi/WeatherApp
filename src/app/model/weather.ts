@@ -3,6 +3,12 @@ export interface Weather {
     lon: number;
     lat: number;
   };
+  weather: [
+    {
+      main: string;
+      icon: string;
+    }
+  ];
   main: {
     temp: number;
     feels_like: number;
