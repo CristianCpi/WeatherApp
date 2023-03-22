@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { FetchWeatherService } from 'src/app/service/fetch-weather.service';
   templateUrl: './current-weather.component.html',
   styleUrls: ['./current-weather.component.css'],
 })
-export class CurrentWeatherComponent implements OnInit {
+export class CurrentWeatherComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   public weather = {} as Weather;
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subject } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { StoreCitiesService } from 'src/app/service/store-cities.service';
   templateUrl: './search-weather.component.html',
   styleUrls: ['./search-weather.component.css'],
 })
-export class SearchWeatherComponent implements OnInit {
+export class SearchWeatherComponent implements OnInit, OnDestroy {
   public showPreviousSelectedCities = false;
   public previousSelectedCities: City[] = [];
 
