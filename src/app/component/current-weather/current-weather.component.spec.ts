@@ -31,6 +31,12 @@ fdescribe('CurrentWeatherComponent', () => {
           lon: -0.1278,
           lat: 51.5074,
         },
+        weather: [
+          {
+            main: 'Clouds',
+            icon: '02n',
+          },
+        ],
         main: {
           temp: 283.73,
           feels_like: 283.14,
